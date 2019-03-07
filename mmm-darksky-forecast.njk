@@ -23,7 +23,7 @@
     {# -------------- Extra Current Conditions -------------- #}
     {% if config.showExtraCurrentConditions %}
       <div class="extra-current-conditions-wrapper small bright">
-        <span class="temperature-container xsmall">
+        <span class="temperature-container small">
           <span class="high-temperature">{{ forecast.currently.tempRange.high }}</span>
           <span class="temperature-separator dimmed">/</span>
           <span class="low-temperature">{{ forecast.currently.tempRange.low }}</span>
@@ -31,7 +31,7 @@
 
         {% if config.showPrecipitation %}
           
-          <span class="precipitation-container xsmall">
+          <span class="precipitation-container small">
             {% if (config.showInlineIcons) %}
               <img class="inline-icon rain" src="{{ inlineIcons.rain }}" />
             {% endif %}
@@ -46,7 +46,7 @@
         {% endif %}
 
         {% if config.showWind %}
-          <span class="wind-container xsmall">
+          <span class="wind-container small">
             {% if (config.showInlineIcons) %}
               <img class="inline-icon wind-icon" src="{{ inlineIcons.wind }}" />
             {% endif %}
@@ -67,7 +67,7 @@
 
     {# -------------- Summary -------------- #}
     {% if config.showSummary %}
-      <div class="summary-wrapper xsmall">
+      <div class="summary-wrapper small">
         <div class="summary">{{ forecast.summary }}</div>
       </div>
     {% endif %}
@@ -108,7 +108,7 @@
 
           {% for h in forecast.hourly %}
             <div class="forecast-item hourly">
-              <span class="time xsmall">{{ h.time }}</span>
+              <span class="time small light">{{ h.time }}</span>
               <span class="forecast-icon-container">
               {% if h.animatedIconId %}
                 <canvas class="skycon-{{ identifier }} forecast-icon" data-animated-icon-name="{{ h.animatedIconName }}" id="{{ h.animatedIconId }}" width="{{ animatedIconSizes.forecast }}" height="{{ animatedIconSizes.forecast }}"></canvas>
@@ -116,12 +116,12 @@
                 <img class="forecast-icon" src="{{ h.iconPath }}" />
               {% endif %}
               </span>
-              <span class="temperature xsmall">{{ h.temperature }}</span>
+              <span class="temperature small">{{ h.temperature }}</span>
 
 
               {% if config.showPrecipitation %}
       
-                <span class="precipitation-container xsmall">
+                <span class="precipitation-container small light">
                   {% if (config.showInlineIcons and config.forecastLayout == "tiled" ) %}
                     <img class="inline-icon rain" src="{{ inlineIcons.rain }}" />
                   {% endif %}
@@ -136,7 +136,7 @@
               {% endif %}
 
               {% if config.showWind %}
-                <span class="wind-container xsmall">
+                <span class="wind-container small light">
                   {% if (config.showInlineIcons and config.forecastLayout == "tiled" ) %}
                     <img class="inline-icon wind-icon" src="{{ inlineIcons.wind }}" />
                   {% endif %}
@@ -163,7 +163,7 @@
 
           {% for d in forecast.daily %}
             <div class="forecast-item hourly">
-              <span class="day-name xsmall">{{ d.day }}</span>
+              <span class="day-name small light">{{ d.day }}</span>
               <span class="forecast-icon-container">
               {% if d.animatedIconId %}
                 <canvas class="skycon-{{ identifier }} forecast-icon" data-animated-icon-name="{{ d.animatedIconName }}" id="{{ d.animatedIconId }}" width="{{ animatedIconSizes.forecast }}" height="{{ animatedIconSizes.forecast }}"></canvas>
@@ -171,7 +171,7 @@
                 <img class="forecast-icon" src="{{ d.iconPath }}" />
               {% endif %}
               </span>
-              <span class="temperature-container xsmall">
+              <span class="temperature-container small">
                 <span class="high-temperature">{{ d.tempRange.high }}</span>
                 <span class="temperature-separator dimmed">/</span>
                 <span class="low-temperature">{{ d.tempRange.low }}</span>
@@ -180,7 +180,7 @@
 
               {% if config.showPrecipitation %}
       
-                <span class="precipitation-container xsmall">
+                <span class="precipitation-container small light">
                   {% if (config.showInlineIcons and config.forecastLayout == "tiled" ) %}
                     <img class="inline-icon rain" src="{{ inlineIcons.rain }}" />
                   {% endif %}
@@ -195,7 +195,7 @@
               {% endif %}
 
               {% if config.showWind %}
-                <span class="wind-container xsmall">
+                <span class="wind-container small light">
                   {% if (config.showInlineIcons and config.forecastLayout == "tiled" ) %}
                     <img class="inline-icon wind-icon" src="{{ inlineIcons.wind }}" />
                   {% endif %}
