@@ -112,7 +112,6 @@
   align-content: flex-start;
   align-items: flex-start;
   margin-bottom: 0 30px;
-  border-top: solid 1px #222;
 }
 
 .MMM-DarkSkyForecast .wrapper.with-forecast-header.tiled .forecast-container {
@@ -124,7 +123,7 @@
   flex-shrink: 1;
   min-width: 100px;
   padding: 10px 5px 10px 5px;
-  border-bottom: solid 1px #222;
+  border-top: solid 1px #222;
 }
 
 
