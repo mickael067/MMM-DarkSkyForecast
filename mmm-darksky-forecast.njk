@@ -23,7 +23,7 @@
     {# -------------- Extra Current Conditions -------------- #}
     {% if config.showExtraCurrentConditions %}
       <div class="extra-current-conditions-wrapper small bright">
-        <span class="temperature-container small">
+        <span class="temperature-container small light">
           <span class="high-temperature">{{ forecast.currently.tempRange.high }}</span>
           <span class="temperature-separator dimmed">/</span>
           <span class="low-temperature">{{ forecast.currently.tempRange.low }}</span>
@@ -31,7 +31,7 @@
 
         {% if config.showPrecipitation %}
           
-          <span class="precipitation-container small">
+          <span class="precipitation-container small light">
             {% if (config.showInlineIcons) %}
               <img class="inline-icon rain" src="{{ inlineIcons.rain }}" />
             {% endif %}
@@ -46,7 +46,7 @@
         {% endif %}
 
         {% if config.showWind %}
-          <span class="wind-container small">
+          <span class="wind-container small light">
             {% if (config.showInlineIcons) %}
               <img class="inline-icon wind-icon" src="{{ inlineIcons.wind }}" />
             {% endif %}
@@ -67,7 +67,7 @@
 
     {# -------------- Summary -------------- #}
     {% if config.showSummary %}
-      <div class="summary-wrapper small light">
+      <div class="summary-wrapper xsmall light">
         <div class="summary">{{ forecast.summary }}</div>
       </div>
     {% endif %}
